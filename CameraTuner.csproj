@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F3B2852-B540-41E7-B9B2-1AABD9ADE623}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>CameraTuner</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.13.0.27</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Redbox</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HAL\CameraTuner\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HAL\CameraTuner\Program.cs" />
+    <Compile Include="HAL\CameraTuner\ScanResult.cs" />
+    <Compile Include="HAL\CameraTuner\TunerLog.cs" />
+    <Compile Include="HAL\CameraTuner\Properties\Resources.cs" />
+    <Compile Include="HAL\CameraTuner\Properties\Settings.cs" />
+    <Compile Include="HAL\Common\GUI\Functions\ButtonAspectsManager.cs" />
+    <Compile Include="HAL\Common\GUI\Functions\ButtonAspects.cs" />
+    <Compile Include="HAL\Common\GUI\Functions\ConfigItem.cs" />
+    <Compile Include="HAL\Common\GUI\Functions\ISessionUser.cs" />
+    <Compile Include="HAL\Common\GUI\Functions\ISessionUserService.cs" />
+    <Compile Include="HAL\Common\GUI\Functions\LocationNumberPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HAL\Common\GUI\Functions\NumberPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HAL\Common\GUI\Functions\NumberPadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HAL\Common\GUI\Functions\OutputBox.cs" />
+    <Compile Include="HAL\Common\GUI\Functions\TextBoxExtensions.cs" />
+    <Compile Include="HAL\Common\GUI\Functions\Properties\Resources.cs" />
+    <Compile Include="DirectShow\FrameControls.cs" />
+    <Compile Include="DirectShow\AbstractDirectShowFrameControl.cs" />
+    <Compile Include="DirectShow\ProcessImageCallback.cs" />
+    <Compile Include="DirectShow\SampleGrabber.cs" />
+    <Compile Include="DirectShow\CameraControlProperty.cs" />
+    <Compile Include="DirectShow\CameraControlFlags.cs" />
+    <Compile Include="DirectShow\DirectShowFrameControl.cs" />
+    <Compile Include="DirectShow\DirectShowFrameControl_v2.cs" />
+    <Compile Include="DirectShow\ExposureFixer.cs" />
+    <Compile Include="DirectShow\FilterCategory.cs" />
+    <Compile Include="DirectShow\FilterInfo.cs" />
+    <Compile Include="DirectShow\FilterInfoCollection.cs" />
+    <Compile Include="DirectShow\FrameControlLegacy.cs" />
+    <Compile Include="DirectShow\FrameControlModern.cs" />
+    <Compile Include="DirectShow\UnsupportedImageFormatException.cs" />
+    <Compile Include="DirectShow\Image.cs" />
+    <Compile Include="DirectShow\IVideoSource.cs" />
+    <Compile Include="DirectShow\ControlConstants.cs" />
+    <Compile Include="DirectShow\PhysicalConnectorType.cs" />
+    <Compile Include="DirectShow\PlayerDevice.cs" />
+    <Compile Include="DirectShow\SystemTools.cs" />
+    <Compile Include="DirectShow\VCDevice3.cs" />
+    <Compile Include="DirectShow\VideoCapabilities.cs" />
+    <Compile Include="DirectShow\NewFrameEventHandler.cs" />
+    <Compile Include="DirectShow\VideoSourceErrorEventHandler.cs" />
+    <Compile Include="DirectShow\PlayingFinishedEventHandler.cs" />
+    <Compile Include="DirectShow\ReasonToFinishPlaying.cs" />
+    <Compile Include="DirectShow\NewFrameEventArgs.cs" />
+    <Compile Include="DirectShow\VideoSourceErrorEventArgs.cs" />
+    <Compile Include="DirectShow\VideoInput.cs" />
+    <Compile Include="DirectShow\VideoSourcePlayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DirectShow\Interop\IAMCameraControl.cs" />
+    <Compile Include="DirectShow\Interop\IAMCrossbar.cs" />
+    <Compile Include="DirectShow\Interop\IAMStreamConfig.cs" />
+    <Compile Include="DirectShow\Interop\IAMVideoControl.cs" />
+    <Compile Include="DirectShow\Interop\IBaseFilter.cs" />
+    <Compile Include="DirectShow\Interop\ICaptureGraphBuilder2.cs" />
+    <Compile Include="DirectShow\Interop\ICreateDevEnum.cs" />
+    <Compile Include="DirectShow\Interop\IEnumFilters.cs" />
+    <Compile Include="DirectShow\Interop\IEnumPins.cs" />
+    <Compile Include="DirectShow\Interop\IFileSourceFilter.cs" />
+    <Compile Include="DirectShow\Interop\IFilterGraph.cs" />
+    <Compile Include="DirectShow\Interop\IFilterGraph2.cs" />
+    <Compile Include="DirectShow\Interop\IGraphBuilder.cs" />
+    <Compile Include="DirectShow\Interop\IMediaControl.cs" />
+    <Compile Include="DirectShow\Interop\IMediaEventEx.cs" />
+    <Compile Include="DirectShow\Interop\IMediaFilter.cs" />
+    <Compile Include="DirectShow\Interop\IPersist.cs" />
+    <Compile Include="DirectShow\Interop\IPin.cs" />
+    <Compile Include="DirectShow\Interop\IPropertyBag.cs" />
+    <Compile Include="DirectShow\Interop\IReferenceClock.cs" />
+    <Compile Include="DirectShow\Interop\ISampleGrabber.cs" />
+    <Compile Include="DirectShow\Interop\ISampleGrabberCB.cs" />
+    <Compile Include="DirectShow\Interop\ISpecifyPropertyPages.cs" />
+    <Compile Include="DirectShow\Interop\IVideoWindow.cs" />
+    <Compile Include="DirectShow\Interop\PinDirection.cs" />
+    <Compile Include="DirectShow\Interop\AMMediaType.cs" />
+    <Compile Include="DirectShow\Interop\PinInfo.cs" />
+    <Compile Include="DirectShow\Interop\FilterInfo.cs" />
+    <Compile Include="DirectShow\Interop\VideoInfoHeader.cs" />
+    <Compile Include="DirectShow\Interop\VideoInfoHeader2.cs" />
+    <Compile Include="DirectShow\Interop\BitmapInfoHeader.cs" />
+    <Compile Include="DirectShow\Interop\RECT.cs" />
+    <Compile Include="DirectShow\Interop\CAUUID.cs" />
+    <Compile Include="DirectShow\Interop\DsEvCode.cs" />
+    <Compile Include="DirectShow\Interop\AnalogVideoStandard.cs" />
+    <Compile Include="DirectShow\Interop\VideoControlFlags.cs" />
+    <Compile Include="DirectShow\Interop\VideoStreamConfigCaps.cs" />
+    <Compile Include="DirectShow\Interop\FilterState.cs" />
+    <Compile Include="DirectShow\Interop\Tools.cs" />
+    <Compile Include="DirectShow\Interop\Clsid.cs" />
+    <Compile Include="DirectShow\Interop\FormatType.cs" />
+    <Compile Include="DirectShow\Interop\MediaType.cs" />
+    <Compile Include="DirectShow\Interop\MediaSubType.cs" />
+    <Compile Include="DirectShow\Interop\PinCategory.cs" />
+    <Compile Include="DirectShow\Interop\FindDirection.cs" />
+    <Compile Include="DirectShow\Interop\Win32.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DirectShow\VideoSourcePlayer.resx" />
+    <EmbeddedResource Include="HAL\CameraTuner\MainForm.resx" />
+    <EmbeddedResource Include="HAL\CameraTuner\Properties\Resources.resx" />
+    <EmbeddedResource Include="HAL\Common\GUI\Functions\NumberPad.resx" />
+    <EmbeddedResource Include="HAL\Common\GUI\Functions\NumberPadForm.resx" />
+    <EmbeddedResource Include="HAL\Common\GUI\Functions\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)lib\Redbox.HAL.Component.Model\Redbox.HAL.Component.Model.csproj">
+      <Project>{86986977-3d6f-4f59-bc0c-d181e7c4d334}</Project>
+      <Name>Redbox.HAL.Component.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)lib\Redbox.HAL.DataMatrix.Framework\Redbox.HAL.DataMatrix.Framework.csproj">
+      <Project>{eca31a53-5557-4a9b-9a34-7a49732e3394}</Project>
+      <Name>Redbox.HAL.DataMatrix.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\Redbox.HAL.Configuration\Redbox.HAL.Configuration.csproj">
+      <Project>{e54fa238-238a-42ce-a889-21031a2b2421}</Project>
+      <Name>Redbox.HAL.Configuration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
