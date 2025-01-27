@@ -168,7 +168,7 @@
       <Project>{eca31a53-5557-4a9b-9a34-7a49732e3394}</Project>
       <Name>Redbox.HAL.DataMatrix.Framework</Name>
     </ProjectReference>
-    <ProjectReference Include="lib\Redbox.HAL.Configuration\Redbox.HAL.Configuration.csproj">
+    <ProjectReference Include="$(SolutionDir)lib\Redbox.HAL.Configuration\Redbox.HAL.Configuration.csproj">
       <Project>{e54fa238-238a-42ce-a889-21031a2b2421}</Project>
       <Name>Redbox.HAL.Configuration</Name>
     </ProjectReference>
